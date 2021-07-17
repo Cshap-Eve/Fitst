@@ -1,0 +1,6 @@
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentModel\bin\Debug\StudentModel.dll
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentModel\bin\Debug\StudentModel.pdb
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentModel\obj\Debug\StudentModel.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentModel\obj\Debug\StudentModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentModel\obj\Debug\StudentModel.dll
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentModel\obj\Debug\StudentModel.pdb

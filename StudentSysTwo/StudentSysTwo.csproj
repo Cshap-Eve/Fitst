@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7C46097-D134-46FD-9E4C-7C6C7C186089}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StudentSysTwo</RootNamespace>
+    <AssemblyName>StudentSysTwo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\StudentSysController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RequestDto\StudentResponse.cs" />
+    <Compile Include="Models\ResponseDto\ResponseDto.cs" />
+    <Compile Include="Models\StudentDto\StudentDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\admin.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\load.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\console1.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\console2.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\department.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\error.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\icon.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\login.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\person.css" />
+    <Content Include="Pear-Admin-Layui\admin\css\other\result.css" />
+    <Content Include="Pear-Admin-Layui\admin\images\403.svg" />
+    <Content Include="Pear-Admin-Layui\admin\images\404.svg" />
+    <Content Include="Pear-Admin-Layui\admin\images\500.svg" />
+    <Content Include="Pear-Admin-Layui\admin\images\act.jpg" />
+    <Content Include="Pear-Admin-Layui\admin\images\avatar.jpg" />
+    <Content Include="Pear-Admin-Layui\admin\images\background.svg" />
+    <Content Include="Pear-Admin-Layui\admin\images\captcha.gif" />
+    <Content Include="Pear-Admin-Layui\admin\images\logo.png" />
+    <Content Include="Pear-Admin-Layui\admin\images\show.png" />
+    <Content Include="Pear-Admin-Layui\component\code\css\style.css" />
+    <Content Include="Pear-Admin-Layui\component\code\index.html" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\layui.css" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\code.css" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\layer\default\icon.png" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\layer\default\layer.css" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Pear-Admin-Layui\component\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Pear-Admin-Layui\component\layui\font\iconfont.svg" />
+    <Content Include="Pear-Admin-Layui\component\layui\layui.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\button.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\card.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\code.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\cropper.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\dtree.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\dtree.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\font\dtreefont.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\font\dtreefont.svg" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\form.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\frame.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\iconPicker.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\label.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\layer.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\layout.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\link.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\loading.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\menu.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\message.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\notice.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\select.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\step.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\tab.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\table.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\tag.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\topBar.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\treetable.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\pear.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\font\iconfont.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\font\iconfont.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\admin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\area.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\button.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\card.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\common.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\context.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\convert.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\count.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\cropper.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\design.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\drawer.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\dtree.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\echarts.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\echartsTheme.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\frame.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\hash.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\http.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\iconPicker.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\loading.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\menu.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\message.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\notice.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\popup.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\select.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\step.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tab.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tag.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\theme.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\icons\default\icons.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\icons\default\icons.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\langs\zh_CN.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\code\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\help\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\image\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\indent2em\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\indent2em\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\link\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\media\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\print\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\quickbars\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\save\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\table\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\template\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\toc\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\dark\content.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\dark\content.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\default\content.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\default\content.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\document\content.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\document\content.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\writer\content.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.inline.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.mobile.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.mobile.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.mobile.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.mobile.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.shadowdom.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.inline.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.mobile.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.mobile.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.mobile.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.mobile.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.shadowdom.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.shadowdom.min.css" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\themes\mobile\theme.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\themes\mobile\theme.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\themes\silver\theme.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\themes\silver\theme.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\tinymce.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\tinymce.min.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\topBar.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\treetable.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\yaml.js" />
+    <Content Include="Pear-Admin-Layui\component\pear\pear.js" />
+    <Content Include="Pear-Admin-Layui\index.html" />
+    <Content Include="Pear-Admin-Layui\login.html" />
+    <Content Include="Pear-Admin-Layui\view\console\console1.html" />
+    <Content Include="Pear-Admin-Layui\view\console\console2.html" />
+    <Content Include="Pear-Admin-Layui\view\document\area.html" />
+    <Content Include="Pear-Admin-Layui\view\document\button.html" />
+    <Content Include="Pear-Admin-Layui\view\document\card.html" />
+    <Content Include="Pear-Admin-Layui\view\document\count.html" />
+    <Content Include="Pear-Admin-Layui\view\document\drawer.html" />
+    <Content Include="Pear-Admin-Layui\view\document\dtree.html" />
+    <Content Include="Pear-Admin-Layui\view\document\form.html" />
+    <Content Include="Pear-Admin-Layui\view\document\hash.html" />
+    <Content Include="Pear-Admin-Layui\view\document\icon.html" />
+    <Content Include="Pear-Admin-Layui\view\document\iconPicker.html" />
+    <Content Include="Pear-Admin-Layui\view\document\loading.html" />
+    <Content Include="Pear-Admin-Layui\view\document\menu.html" />
+    <Content Include="Pear-Admin-Layui\view\document\notice.html" />
+    <Content Include="Pear-Admin-Layui\view\document\popup.html" />
+    <Content Include="Pear-Admin-Layui\view\document\select.html" />
+    <Content Include="Pear-Admin-Layui\view\document\step.html" />
+    <Content Include="Pear-Admin-Layui\view\document\tab.html" />
+    <Content Include="Pear-Admin-Layui\view\document\tabContent.html" />
+    <Content Include="Pear-Admin-Layui\view\document\table.html" />
+    <Content Include="Pear-Admin-Layui\view\document\tag.html" />
+    <Content Include="Pear-Admin-Layui\view\document\tinymce.html" />
+    <Content Include="Pear-Admin-Layui\view\document\topBar.html" />
+    <Content Include="Pear-Admin-Layui\view\document\treetable.html" />
+    <Content Include="Pear-Admin-Layui\view\echarts\column.html" />
+    <Content Include="Pear-Admin-Layui\view\echarts\line.html" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\column1.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\column2.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\column3.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\column4.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\line1.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\line2.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\line3.js" />
+    <Content Include="Pear-Admin-Layui\view\echarts\script\line4.js" />
+    <Content Include="Pear-Admin-Layui\view\error\403.html" />
+    <Content Include="Pear-Admin-Layui\view\error\404.html" />
+    <Content Include="Pear-Admin-Layui\view\error\500.html" />
+    <Content Include="Pear-Admin-Layui\view\result\error.html" />
+    <Content Include="Pear-Admin-Layui\view\result\success.html" />
+    <Content Include="Pear-Admin-Layui\view\system\deptment.html" />
+    <Content Include="Pear-Admin-Layui\view\system\dict.html" />
+    <Content Include="Pear-Admin-Layui\view\system\log.html" />
+    <Content Include="Pear-Admin-Layui\view\system\operate\add.html" />
+    <Content Include="Pear-Admin-Layui\view\system\operate\edit.html" />
+    <Content Include="Pear-Admin-Layui\view\system\operate\uploadProfile.html" />
+    <Content Include="Pear-Admin-Layui\view\system\person.html" />
+    <Content Include="Pear-Admin-Layui\view\system\power.html" />
+    <Content Include="Pear-Admin-Layui\view\system\role.html" />
+    <Content Include="Pear-Admin-Layui\view\system\space.html" />
+    <Content Include="Pear-Admin-Layui\view\system\theme.html" />
+    <Content Include="Pear-Admin-Layui\view\system\user.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Pear-Admin-Layui\admin\data\card.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\dataMenu.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\dataTree2.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\dictData.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\dictType.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\dtree.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\loginLog.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\menu.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\message.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\operateLog.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\organization.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\organizationtree.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\power.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\role.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\table.json" />
+    <Content Include="Pear-Admin-Layui\admin\data\user.json" />
+    <Content Include="Pear-Admin-Layui\component\layui\font\iconfont.eot" />
+    <Content Include="Pear-Admin-Layui\component\layui\font\iconfont.ttf" />
+    <Content Include="Pear-Admin-Layui\component\layui\font\iconfont.woff" />
+    <Content Include="Pear-Admin-Layui\component\layui\font\iconfont.woff2" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\font\dtreefont.eot" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\font\dtreefont.ttf" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\font\dtreefont.woff" />
+    <Content Include="Pear-Admin-Layui\component\pear\css\module\dtree\font\icons.json" />
+    <Content Include="Pear-Admin-Layui\component\pear\font\iconfont.json" />
+    <Content Include="Pear-Admin-Layui\component\pear\font\iconfont.ttf" />
+    <Content Include="Pear-Admin-Layui\component\pear\font\iconfont.woff" />
+    <Content Include="Pear-Admin-Layui\component\pear\font\iconfont.woff2" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\langs\readme.md" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\dark\content.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\default\content.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\document\content.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\content\writer\content.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.inline.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\content.mobile.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\fonts\tinymce-mobile.woff" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.mobile.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.inline.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\content.mobile.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.mobile.min.css.map" />
+    <Content Include="Pear-Admin-Layui\component\pear\module\tinymce\tinymce\skins\ui\oxide\skin.shadowdom.min.css.map" />
+    <Content Include="Pear-Admin-Layui\config\pear.config.json" />
+    <Content Include="Pear-Admin-Layui\config\pear.config.yml" />
+    <Content Include="Pear-Admin-Layui\LICENSE" />
+    <Content Include="Pear-Admin-Layui\README.md" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\StudentSys\Index.cshtml" />
+    <Content Include="Views\StudentSys\Student.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\StudentSysy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentBLL\StudentBLL.csproj">
+      <Project>{603D81C8-54F0-4954-94C1-2DC5490F4185}</Project>
+      <Name>StudentBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentModel\StudentModel.csproj">
+      <Project>{D0A7E01C-BB09-48C3-8D02-1C2C29C23ACC}</Project>
+      <Name>StudentModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49559</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49559/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

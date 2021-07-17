@@ -1,0 +1,9 @@
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\bin\Debug\StudentBLL.dll
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\bin\Debug\StudentBLL.pdb
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\bin\Debug\StudentModel.dll
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\bin\Debug\StudentModel.pdb
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\obj\Debug\StudentBLL.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\obj\Debug\StudentBLL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\obj\Debug\StudentBLL.csproj.CopyComplete
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\obj\Debug\StudentBLL.dll
+C:\Users\Administrator\source\repos\StudentSysTwo\StudentBLL\obj\Debug\StudentBLL.pdb

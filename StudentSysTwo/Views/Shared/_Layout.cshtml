@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Pear-Admin-Layui/component/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/Pear-Admin-Layui/component/layui/layui.js"></script>
+</head>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        @* 头部导航 *@
+        <div class="layui-header">
+            <ul class="layui-nav" style="border-radius:0px">
+                <li class="layui-nav-item">
+                    <a href="">学生管理系统---李重潮<span class="layui-badge">Pro</span></a>
+                </li>
+                <li class="layui-nav-item" style="float:right">
+                    <a href="">小圆点<span class="layui-badge-dot"></span></a>
+                </li>
+                <li class="layui-nav-item" lay-unselect="" style="float:right">
+                    <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img"></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">子级菜单</a></dd>
+                        <dd><a href="javascript:;">横线隔断</a></dd>
+                        <dd style="text-align: center;"><a href="">退出</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        @* 侧边导航 *@
+        <div class="layui-side layui-bg-black">
+            <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="demo" style="margin-right: 10px;border-radius:0px;height:100%">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">学生管理</a>
+                    <dl class="layui-nav-child">
+                        <dd>@Html.ActionLink("学生管理","Student","StudentSys")</dd>
+                        <dd>@Html.ActionLink("签到","Student","StudentSys")</dd>
+                        <dd>@Html.ActionLink("转班","Grade","StudentSys")</dd>
+                        <dd>@Html.ActionLink("升学","Sys","StudentSys")</dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">教师管理</a>
+                    <dl class="layui-nav-child">
+                        <dd>@Html.ActionLink("教师管理","Teacher","StudentSys")</dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">班级管理</a>
+                    <dl class="layui-nav-child">
+                        <dd>@Html.ActionLink("班级管理","Class","StudentSys")</dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">系统管理</a>
+                    <dl class="layui-nav-child">
+                        <dd>@Html.ActionLink("系统管理","Teacher","StudentSys")</dd>
+                        <dd>@Html.ActionLink("系统管理","Teacher","StudentSys")</dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">待定</a></li>
+                <li class="layui-nav-item"><a href="">待定</a></li>
+            </ul>
+        </div>
+        @* 内容 *@
+        <div class="layui-body">
+            <section>
+                @RenderBody()
+            </section>
+            @Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+        </div>
+        @* 底部 *@
+        <div class="layui-footer">底部</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(function () {
+
+    })
+    layui.use('dropdown', function () {
+        var dropdown = layui.dropdown;
+        //菜单点击事件，其中 docDemoMenu1 对应的是菜单结构上的 id 指
+        dropdown.on('click(docDemoMenu1)', function (options) {
+            var othis = $(this); //当前菜单列表的 DOM 对象
+            console.log(options); //菜单列表的 lay-options 中的参数
+        });
+    });
+
+</script>
